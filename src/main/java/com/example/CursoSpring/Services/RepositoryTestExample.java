@@ -13,20 +13,20 @@ import com.example.CursoSpring.Repositories.ExampleRepository;
 public class RepositoryTestExample {
 	
 	//declaramos el/los repositorio que utilizara el servicio
-	ExampleRepository repository;
+	private ExampleRepository repository;
 	
 	//inyectamos los repositorios por constructor 
 	public RepositoryTestExample(ExampleRepository exampleRepositroy) {
 		this.repository = exampleRepositroy;
 	}
 	
-	@EventListener(ApplicationReadyEvent.class)
+	//@EventListener(ApplicationReadyEvent.class)
 	//esta notacion hace que el void se ejecute una vez que la aplicacion levante
 	public void TesteandoRepo() {
 		System.out.println(ExampleEntity.msg);
 		ExampleEntity ee = new ExampleEntity();
-		ee.setComent("mi primer post");
-		ee.setDate(LocalDate.now());
+		//ee.setComent("mi primer post");
+		//ee.setDate(LocalDate.now());
 		//repository.save(ee);
 	}
 }
