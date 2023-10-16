@@ -4,10 +4,12 @@ import java.time.LocalDate;
 
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.stereotype.Service;
 
 import com.example.CursoSpring.Entities.Persona;
 import com.example.CursoSpring.Repositories.PersonaRepository;
 
+@Service
 public class RepositoryTestRodri {
 	
 	private PersonaRepository repo;
@@ -26,7 +28,7 @@ public class RepositoryTestRodri {
 		p.setDni("33.333.333");
 		p.setNaci(LocalDate.now());// llamo a calse localdate
 		//que tiene metodo statico now que devuelve fecha de hoy
-		repo.save(p);
+		//repo.save(p);
 	}
 }
 

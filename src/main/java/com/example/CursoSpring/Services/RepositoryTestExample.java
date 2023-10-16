@@ -20,7 +20,7 @@ public class RepositoryTestExample {
 		this.repository = exampleRepositroy;
 	}
 	
-	//@EventListener(ApplicationReadyEvent.class)
+	@EventListener(ApplicationReadyEvent.class)
 	//esta notacion hace que el void se ejecute una vez que la aplicacion levante
 	public void TesteandoRepo() {
 		System.out.println(ExampleEntity.msg);
