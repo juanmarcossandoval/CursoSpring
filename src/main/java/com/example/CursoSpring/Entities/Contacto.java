@@ -23,14 +23,14 @@ public class Contacto {
 	private Long id_contacto;
 	
 	@Column (name = "Provincia" , nullable = false, unique = false, length = 50)
-	private String Provincia;
+	private String provincia;
 	
 	@Column (name = "Direccion", nullable = false, unique = false, length = 50)
-	private String Direccion;
+	private String direccion;
 	
 	@Column (name = "Ciudad", nullable = false, unique = false, length = 50)
-	private String Ciudad;
+	private String ciudad;
 	
 	@Column (name = "Email", nullable = false, unique = true, length = 256)
-	private String Email;
+	private String email;
 }
