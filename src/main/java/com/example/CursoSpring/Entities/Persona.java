@@ -2,11 +2,14 @@ package com.example.CursoSpring.Entities;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,4 +37,8 @@ public class Persona {
 	
 	@Column(name = "documento", nullable = false, unique = true, length = 10)
 	private String dni;
+	
+	@OneToOne(cascade = CascadeType.PERSIST , orphanRemoval = true)
+	@JoinColumn( name = "FK_contacto_id" , referencedColumnName = "id_contacto" )
+	private Contacto contacto;
 }
